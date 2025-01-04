@@ -1,0 +1,20 @@
+html {
+    background-color: grey;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.rules {
+    display: inline-block;
+    text-align: center;
+    width: 500px;
+}
+
+.guess .word {
+    text-align: center;
+}

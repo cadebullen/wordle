@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Guess The Random Word </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1> Guess The Random Word </h1>
+        <div class="rules">
+            <p><strong> How To Play: </strong>
+            <p> <span style="text-decoration: underline;"> Basics:</span>
+                This game is similar to the popular game, Wordle. You will have to guess a random word, and each letter guessed correctly or incorrectly will be displayed, to help guide you towards the answer. 
+                The correct letters will be displayed in green, and the incorrect letter will be displayed in red. 
+                <br>
+                <br>
+                <span style="text-decoration: underline;"> New Word:</span>
+                Click the "New Word" button to generate a new random word. There is also the ability to specify the length of the word you will like to guess, so choose that value if you desire.
+        </div>
+
+        <div class="guess">
+            <br><br><br><br>
+            <p id="guess"></p>
+        </div>
+
+        <div>
+            <label for="length"> Choose the length of the word: </label>
+            <select name="length" id="length">
+                <option value="--">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+
+
+
+            </select>
+            <button type="button" id="regenerate"> New Word</button>
+        </div>
+
+        <form>
+            <div class="word">
+                <label for="typed"> Please type your guess here:</label>
+                <input type="text" id="typed">
+
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        
+
+        <div class="letters">
+            <table> 
+                <tr>
+                    <th class="correct"> Correct </th>
+                    <th class="wrong"> Wrong </th>
+                </tr>
+            </table>
+        </div>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
