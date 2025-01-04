@@ -1,10 +1,9 @@
-
 var apiWord;
 let correctLetters = "";
 let wrongLetters ="";
 
-// grab the length of the word desired to call the correct api
 
+// grab the length of the word desired to call the correct api
 document.getElementById('regenerate').addEventListener('click', () =>{
     const wordLength = document.getElementById('length').value;
     let apiURL; 
@@ -26,8 +25,8 @@ document.getElementById('regenerate').addEventListener('click', () =>{
         .catch(error => console.error('Error fetching random word:', error));
 });
 
-// grab the matched word typed and compare to the api random word
 
+// grab the matched word typed and compare to the api random word
 let guessedWord = document.getElementById("typed").value;
 
 for (let i = 0; i < guessedWord.length; i++){
@@ -42,6 +41,18 @@ for (let i = 0; i < guessedWord.length; i++){
     }
 
     if (!foundMatch){
-        wrongLetters += guessedWord[i];
+        wrongLetters += guessedWord[i];  //need to add the correct & wrong letters to their respective table
     }
 } 
+
+// display the previous guessed words (entire word)
+let prevGuesses = [];
+document.getElementById("submit").addEventListener("click", () => {
+    guessedWord = document.getElementById("typed").value;
+
+     if (guessedWord){
+        prevGuesses.push(guessedWord)
+        document.getElementById("prevGuesses").innerText - prevGuesses.join(", ");
+        document.getElementById("typed").value = "";
+     }
+});
